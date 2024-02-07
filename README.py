@@ -54,7 +54,6 @@ class Lecturer(Mentor):
     def __str__(self):
         return f"Имя: {self.name}\nФамилия: {self.surname}\nСредняя оценка за лекции: {_avg_grade(self)}"
 
-
     def __lt__(self, other):
         return _avg_grade(self) < _avg_grade(other)
 
@@ -102,7 +101,6 @@ def avg_grade2(lectors, course_):
         return 0
 
 
-
 best_student = Student('Ruoy', 'Eman', 'your_gender')
 bad_student = Student('Sam', 'Johnson', 'male')
 
@@ -128,9 +126,7 @@ cool_reviewer.rate_hw(bad_student, 'Python', 10)
 cool_reviewer.rate_hw(best_student, 'Python', 9)
 
 print(cool_reviewer)
-# print(norm_reviewer)
 
-# print(cool_lecturer)
 print(cool_lecturer1)
 
 print(best_student)
@@ -144,4 +140,3 @@ print(_avg_grade(best_student))
 print(avg_grade([best_student, bad_student], 'Python'))
 print(avg_grade2([cool_lecturer, cool_lecturer1], 'Python'))
 
-# print(best_student.grades)
